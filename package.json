@@ -4,11 +4,13 @@
   "description": "",
   "main": "/dist/index.js",
   "scripts": {
+    "setup": "ts-node utils/setupDatabase.ts",
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "ts-node-dev src/index.ts",
     "lint": "eslint 'src/**/*.{ts,js}' --fix",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +35,8 @@
   },
   "dependencies": {
     "dotenv": "^16.4.7",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
   }
 }

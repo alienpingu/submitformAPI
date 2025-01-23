@@ -16,14 +16,20 @@ const config: Config = {
   // cacheDirectory: "/private/var/folders/kg/v4ccdfps25995t3cyp9s3lnr0000gp/T/jest_dy",
 
   // Automatically clear mock calls, instances, contexts and results before every test
-  clearMocks: true,
+  clearMocks: false,
 
   // Indicates whether the coverage information should be collected while executing the test
-  collectCoverage: true,
+  collectCoverage: false,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  // collectCoverageFrom: undefined,
-
+  collectCoverageFrom: [
+    "src/**/*.{js,ts}", // Analizza tutti i file JavaScript e TypeScript nella cartella src
+    "!src/**/*.d.ts", // Escludi i file di definizione TypeScript
+    "!src/index.{js,ts}", // Escludi i file di definizione TypeScript
+    "!src/**/__tests__/**", // Escludi i file dei test stessi
+    "!src/**/*.test.{js,ts}", // Escludi file specifici dei test
+    "!src/**/*.spec.{js,ts}" // Escludi file specifici dei test],
+  ],
   // The directory where Jest should output its coverage files
   coverageDirectory: "coverage",
 
