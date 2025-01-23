@@ -4,7 +4,7 @@
   "description": "",
   "main": "/dist/index.js",
   "scripts": {
-    "setup": "ts-node utils/setupDatabase.ts",
+    "setup": "ts-node func/setupDatabase.ts",
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "ts-node-dev src/index.ts",

@@ -7,6 +7,7 @@ export const database = new sqlite3.Database("database.sqlite", (err) => {
     console.error("Errore durante l'inizializzazione del database:", err.message);
   } else {
     console.log("Database connesso correttamente.");
+
   }
 });
 
@@ -23,7 +24,7 @@ async function handleFormSubmit(req: Request, res: Response): Promise<void> {
     // Input validation
     if (!name || !email || !message) {
       res.status(400).send({
-        error: "Tutti i campi (name, email, message) sono obbligatori.",
+        error: "Tutti i campi (name, email, message) sono obbligatori."
       });
       return;
     }
